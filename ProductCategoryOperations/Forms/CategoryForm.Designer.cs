@@ -46,6 +46,8 @@ namespace ProductCategoryOperations.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonGoBack = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonGoProductOp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,19 +195,41 @@ namespace ProductCategoryOperations.Forms
             // 
             // buttonGoBack
             // 
-            this.buttonGoBack.Location = new System.Drawing.Point(59, 393);
+            this.buttonGoBack.Location = new System.Drawing.Point(38, 393);
             this.buttonGoBack.Name = "buttonGoBack";
-            this.buttonGoBack.Size = new System.Drawing.Size(128, 55);
+            this.buttonGoBack.Size = new System.Drawing.Size(118, 55);
             this.buttonGoBack.TabIndex = 36;
             this.buttonGoBack.Text = "Go Back To Home Page";
             this.buttonGoBack.UseVisualStyleBackColor = true;
             this.buttonGoBack.Click += new System.EventHandler(this.buttonGoBack_Click);
             // 
-            // CategoryOperations
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(695, 415);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(92, 33);
+            this.buttonExit.TabIndex = 37;
+            this.buttonExit.Text = "EXIT";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // buttonGoProductOp
+            // 
+            this.buttonGoProductOp.Location = new System.Drawing.Point(187, 393);
+            this.buttonGoProductOp.Name = "buttonGoProductOp";
+            this.buttonGoProductOp.Size = new System.Drawing.Size(118, 55);
+            this.buttonGoProductOp.TabIndex = 38;
+            this.buttonGoProductOp.Text = "Go To Product Operations";
+            this.buttonGoProductOp.UseVisualStyleBackColor = true;
+            this.buttonGoProductOp.Click += new System.EventHandler(this.buttonGoProductOp_Click);
+            // 
+            // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 497);
+            this.Controls.Add(this.buttonGoProductOp);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonGoBack);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -223,7 +247,8 @@ namespace ProductCategoryOperations.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewCategories);
             this.Controls.Add(this.label1);
-            this.Name = "CategoryOperations";
+            this.Name = "CategoryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryOperations";
             this.Load += new System.EventHandler(this.CategoryOperations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).EndInit();
@@ -251,5 +276,7 @@ namespace ProductCategoryOperations.Forms
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonGoBack;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonGoProductOp;
     }
 }

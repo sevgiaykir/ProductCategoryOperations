@@ -109,9 +109,18 @@ namespace ProductCategoryOperations.Forms
             DialogResult dialogResult = MessageBox.Show($"Delete this category? {selectedCategory.Name}", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                categoryOperations.DeleteCategory(selectedCategory);
-                FillComboBoxCategories();
-                getCategories();
+                int affectedRow = categoryOperations.DeleteCategory(selectedCategory);
+                if (affectedRow > 0)
+                {
+                    MessageBox.Show("Category deleting is successful!", "Information", MessageBoxButtons.OK);
+                    FillComboBoxCategories();
+                    getCategories();
+                    Cleartxt(this);
+                }
+                else
+                {
+                    MessageBox.Show("Category is couldn't be deleted!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -129,6 +138,20 @@ namespace ProductCategoryOperations.Forms
         private void buttonGoBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonGoProductOp_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["ProductOperations"] == null)
+            {
+                Form ProductOperations = new ProductForm();
+                ProductOperations.Show();
+            }
         }
     }
 }

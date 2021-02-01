@@ -13,6 +13,7 @@ namespace ProductCategoryOperations.Operations
     {
         ProductCategoryDB db = new ProductCategoryDB();
 
+        //Crud operations for categories
         public int AddCategory(Category category)
         {
             db.Categories.Add(category);
