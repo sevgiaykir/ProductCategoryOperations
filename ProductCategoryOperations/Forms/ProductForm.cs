@@ -117,25 +117,33 @@ namespace ProductCategoryOperations.Forms
 
         private void buttonUpdateProd_Click(object sender, EventArgs e)
         {
-            selectedProduct.Name = textBoxUpdProdName.Text;
-            selectedProduct.Description = textBoxUpdProdDesc.Text;
-            selectedProduct.Price = Convert.ToDecimal(textBoxUpdPrice.Text);
-
-            int selectedCategoryId = (int)comboBoxUpdCtOfPro.SelectedValue;//
-            var category = productOperations.GetCategoryById(selectedCategoryId);
-            selectedProduct.CategoryId = category.Id;
-
-            int affectedRow = productOperations.UpdateProduct(selectedProduct);
-            if (affectedRow > 0)
+            if (textBoxUpdProdName.Text == string.Empty || textBoxUpdProdDesc.Text == string.Empty || textBoxUpdPrice.Text == string.Empty)
             {
-                MessageBox.Show("Product updating is successful!", "Information", MessageBoxButtons.OK);
-                getProducts();
-                FillAllComboBox();
-                Cleartxt(this);
+                MessageBox.Show("Please fill in the fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                MessageBox.Show("Product is couldn't be updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                selectedProduct.Name = textBoxUpdProdName.Text;
+                selectedProduct.Description = textBoxUpdProdDesc.Text;
+                selectedProduct.Price = Convert.ToDecimal(textBoxUpdPrice.Text);
+
+                int selectedCategoryId = (int)comboBoxUpdCtOfPro.SelectedValue;//
+                var category = productOperations.GetCategoryById(selectedCategoryId);
+                selectedProduct.CategoryId = category.Id;
+
+                int affectedRow = productOperations.UpdateProduct(selectedProduct);
+                if (affectedRow > 0)
+                {
+                    MessageBox.Show("Product updating is successful!", "Information", MessageBoxButtons.OK);
+                    getProducts();
+                    FillAllComboBox();
+                    Cleartxt(this);
+                }
+                else
+                {
+                    MessageBox.Show("Product is couldn't be updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

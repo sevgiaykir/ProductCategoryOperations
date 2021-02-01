@@ -88,19 +88,27 @@ namespace ProductCategoryOperations.Forms
 
         private void buttonUpdateCat_Click(object sender, EventArgs e)
         {
-            selectedCategory.Name = textBoxUpdCatName.Text;
-            selectedCategory.Description = textBoxUpdCatDesc.Text;
-            int affectedRow = categoryOperations.UpdateCategory(selectedCategory);
-            if (affectedRow > 0)
+            if (textBoxUpdCatName.Text == string.Empty || textBoxUpdCatDesc.Text == string.Empty)
             {
-                MessageBox.Show("Category updating is successful!", "Information", MessageBoxButtons.OK);
-                Cleartxt(this);
-                getCategories();
-                FillComboBoxCategories();
+                MessageBox.Show("Please fill in the fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                MessageBox.Show("Category is couldn't be updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                selectedCategory.Name = textBoxUpdCatName.Text;
+                selectedCategory.Description = textBoxUpdCatDesc.Text;
+                int affectedRow = categoryOperations.UpdateCategory(selectedCategory);
+                if (affectedRow > 0)
+                {
+                    MessageBox.Show("Category updating is successful!", "Information", MessageBoxButtons.OK);
+                    Cleartxt(this);
+                    getCategories();
+                    FillComboBoxCategories();
+                }
+                else
+                {
+                    MessageBox.Show("Category is couldn't be updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
