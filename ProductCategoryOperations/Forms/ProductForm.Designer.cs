@@ -58,13 +58,15 @@ namespace ProductCategoryOperations.Forms
             this.comboBoxUpdCtOfPro = new System.Windows.Forms.ComboBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonGoCategoryOp = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(455, 193);
+            this.label7.Location = new System.Drawing.Point(445, 187);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 17);
             this.label7.TabIndex = 34;
@@ -81,9 +83,9 @@ namespace ProductCategoryOperations.Forms
             // 
             // buttonDeleteProduct
             // 
-            this.buttonDeleteProduct.Location = new System.Drawing.Point(717, 218);
+            this.buttonDeleteProduct.Location = new System.Drawing.Point(719, 218);
             this.buttonDeleteProduct.Name = "buttonDeleteProduct";
-            this.buttonDeleteProduct.Size = new System.Drawing.Size(133, 50);
+            this.buttonDeleteProduct.Size = new System.Drawing.Size(131, 39);
             this.buttonDeleteProduct.TabIndex = 32;
             this.buttonDeleteProduct.Text = "Delete Product";
             this.buttonDeleteProduct.UseVisualStyleBackColor = true;
@@ -102,7 +104,7 @@ namespace ProductCategoryOperations.Forms
             // comboBoxProducts
             // 
             this.comboBoxProducts.FormattingEnabled = true;
-            this.comboBoxProducts.Location = new System.Drawing.Point(438, 221);
+            this.comboBoxProducts.Location = new System.Drawing.Point(428, 215);
             this.comboBoxProducts.Name = "comboBoxProducts";
             this.comboBoxProducts.Size = new System.Drawing.Size(239, 24);
             this.comboBoxProducts.TabIndex = 28;
@@ -319,6 +321,24 @@ namespace ProductCategoryOperations.Forms
             this.buttonGoCategoryOp.UseVisualStyleBackColor = true;
             this.buttonGoCategoryOp.Click += new System.EventHandler(this.buttonGoCategoryOp_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(13, 174);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(357, 257);
+            this.groupBox1.TabIndex = 52;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Adding";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(367, 253);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(346, 258);
+            this.groupBox2.TabIndex = 53;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Updating";
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,6 +373,8 @@ namespace ProductCategoryOperations.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewProducts);
             this.Controls.Add(this.PRODUCTS);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "ProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductOperations";
@@ -394,5 +416,7 @@ namespace ProductCategoryOperations.Forms
         private System.Windows.Forms.ComboBox comboBoxUpdCtOfPro;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonGoCategoryOp;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

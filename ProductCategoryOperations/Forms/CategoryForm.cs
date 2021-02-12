@@ -26,7 +26,7 @@ namespace ProductCategoryOperations.Forms
         Category selectedCategory;
         void getCategories()
         {
-            dataGridViewCategories.DataSource = db.Categories.ToList();
+            dataGridViewCategories.DataSource = categoryOperations.GetCategories();
         }
 
         private void buttonAddCategory_Click(object sender, EventArgs e)

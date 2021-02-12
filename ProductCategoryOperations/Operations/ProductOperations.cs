@@ -14,6 +14,12 @@ namespace ProductCategoryOperations.Operations
         ProductCategoryDB db = new ProductCategoryDB();
 
         //Crud operations for products
+
+        public List<Product> GetProducts()
+        {
+            return db.Products.ToList();
+        }
+
         public int AddProduct(Product product)
         {
             db.Products.Add(product);

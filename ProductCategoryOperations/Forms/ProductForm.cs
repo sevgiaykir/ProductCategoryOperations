@@ -37,7 +37,7 @@ namespace ProductCategoryOperations.Forms
 
         void getProducts()
         {
-            dataGridViewProducts.DataSource = db.Products.ToList();
+            dataGridViewProducts.DataSource = productOperations.GetProducts();
         }
 
         private void buttonAddProduct_Click(object sender, EventArgs e)

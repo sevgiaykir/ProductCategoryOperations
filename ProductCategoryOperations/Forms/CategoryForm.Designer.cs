@@ -48,6 +48,8 @@ namespace ProductCategoryOperations.Forms
             this.buttonGoBack = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonGoProductOp = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,6 +225,24 @@ namespace ProductCategoryOperations.Forms
             this.buttonGoProductOp.UseVisualStyleBackColor = true;
             this.buttonGoProductOp.Click += new System.EventHandler(this.buttonGoProductOp_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(38, 178);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(317, 173);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Adding";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(372, 259);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(219, 206);
+            this.groupBox2.TabIndex = 40;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Updating";
+            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,6 +267,8 @@ namespace ProductCategoryOperations.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewCategories);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "CategoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryOperations";
@@ -278,5 +300,7 @@ namespace ProductCategoryOperations.Forms
         private System.Windows.Forms.Button buttonGoBack;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonGoProductOp;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
